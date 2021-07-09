@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="wemos-d1-data-collector:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>wemos-d1-data-collector</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="wemos-d1-data-collector-1.0.war">
+      <element id="artifact" artifact-name="wemos-d1-data-collector:war exploded" />
+    </root>
+  </artifact>
+</component>
