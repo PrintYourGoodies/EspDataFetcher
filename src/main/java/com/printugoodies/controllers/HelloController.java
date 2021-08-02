@@ -1,7 +1,8 @@
-package com.mkyong.web.controller;
+package com.printugoodies.controllers;
 
-import com.mkyong.web.controller.dbUtils.dbUtils;
-import org.h2.util.json.JSONObject;
+import com.printugoodies.dbUtils.dbUtils;
+
+import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +17,6 @@ import java.io.InputStreamReader;
 import java.net.URLDecoder;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-
-import static javax.print.attribute.standard.ReferenceUriSchemesSupported.HTTP;
 
 
 @Controller
@@ -77,8 +76,10 @@ public class HelloController {
 
             String reqBody = URLDecoder.decode(sb.toString());
             System.out.println("Request Body:" + reqBody);
-//            JSONObject json = new JSONObject(reqBody);
-       int i=0;
+            JSONObject json = new JSONObject(reqBody);
+            String fileName=json.getString("sensorType")+"_"+json.getString("timestamp");
+            System.out.println(fileName);
+
         } catch (Exception e) {
             return null;
         }
