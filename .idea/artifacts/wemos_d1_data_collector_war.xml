@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="wemos-d1-data-collector-1.0.war">
+    <root id="archive" name="jsonDataFetcher.war">
       <element id="artifact" artifact-name="wemos-d1-data-collector:war exploded" />
     </root>
   </artifact>
